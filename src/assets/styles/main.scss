@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 14px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+    max-width: 1280px;
+    height: 60px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    color: #E31F24;
+}
+
+.profile {
+    font-size: 16px;
+}
+
+::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #76787D;
+}
+
+.main {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    box-shadow: 0px 0px 10px 0px #0000001A;
+    border-radius: 10px;
+    overflow: auto;
+
+    .left {
+        background-color: #fdfdfd;
+        border-right: 1px solid #DEDEDD;
+        flex-grow: 0;
+        flex-basis: 290px;
+        padding: 25px 20px;
+
+        strong {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 23px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            max-width: 240px;
+            border-radius: 8px;
+            border: 1px solid #E9ECEF;
+            height: 46px;
+            line-height: 46px;
+            padding: 0px 16px;
+            outline: 0px;
+            margin-bottom: 20px;
+        }
+
+        .result, .empty {
+            color: #76787D;
+        }
+        .result {
+          overflow: scroll;
+          max-height: 100%;
+        }
+
+        .card {
+            width: 240px;
+            height: 70px;
+            display: flex;
+            color: #76787D;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            box-shadow: 0px 0px 10px 0px #0000001A;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+
+            .info {
+                padding: 0px 10px;
+
+                strong {
+                    margin: unset;
+                    font-size: 14px;
+                }
+
+                .email {
+                    display: block;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    max-width: 150px;
+                }
+            }
+
+            .photo {
+                width: 70px;
+                height: 70px;
+                background-size: 50%;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-right: 1px solid #E0E0E0;
+            }
+        }
+    }
+
+    .right {
+        background-color: white;
+        border-radius: 10px 0px 0px 0px;
+        flex-grow: 1;
+        display: flex;
+        contain: strict;
+        padding: 40px 25px;
+
+        .empty {
+          flex-grow: 1;
+          text-align: center;
+          align-content: center;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: row;
+            color: #76787D;
+
+            .photo {
+                min-width: 420px;
+                max-height: 290px;
+                border: 1px solid #E0E0E0;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                margin-left: 50px;
+                line-height: 18px;
+
+                .about .title {
+                    color: #333333;
+                    margin: 20px 0px;
+                }
+
+                .line {
+                    line-height: 30px;
+
+                    span {
+                        font-weight: 600;
+                        color: black;
+                    }
+                }
+            }
+
+            .title {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 23px;
+                color: black;
+            }
+        }
+    }
+}
+
+.left {
+    contain: strict;
+}
